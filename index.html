@@ -495,6 +495,8 @@ a.firm-arm:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; 
 .paths { display: grid; grid-template-columns: 1fr 1fr; gap: 1.8rem; margin-top: 2.5rem; }
 .path-card { position: relative; border: 1px solid var(--rule); padding: 2.6rem 2.4rem; background: rgba(38, 33, 40, 0.45); overflow: hidden; transition: transform 0.35s var(--ease), border-color 0.35s var(--ease), box-shadow 0.35s var(--ease); display: flex; flex-direction: column; text-align: left; }
 .path-card:hover { transform: translateY(-4px); border-color: var(--gold); box-shadow: 0 22px 60px -30px rgba(201,169,97,0.4); }
+a.path-card { text-decoration: none; color: inherit; cursor: pointer; }
+.path-card:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 .path-eyebrow { font-family: var(--font-sans); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
 .path-h { font-family: var(--font-serif); font-size: clamp(1.7rem, 3vw, 2.2rem); font-weight: 600; color: var(--cream); line-height: 1.15; margin-bottom: 0.9rem; }
 .path-p { font-size: 0.98rem; line-height: 1.7; color: var(--cream-soft); font-weight: 300; margin-bottom: 1.8rem; flex: 1; }
@@ -558,7 +560,8 @@ a.firm-arm:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; 
   color: var(--accent, var(--gold));
   margin-bottom: 1rem;
 }
-.location-name { font-family: var(--font-serif); font-size: clamp(1.7rem, 3vw, 2.1rem); font-weight: 600; color: var(--cream); margin-bottom: 0.8rem; line-height: 1.1; }
+.location-name { font-family: var(--font-serif); font-size: clamp(1.7rem, 3vw, 2.1rem); font-weight: 600; color: var(--cream); margin-bottom: 0.8rem; line-height: 1.1; min-height: 2.2em; }
+@media (max-width: 760px) { .location-name { min-height: 0; } }
 .location-meta { font-family: var(--font-sans); font-size: 0.94rem; color: var(--cream-soft); margin-bottom: 1.5rem; font-weight: 300; line-height: 1.65; }
 .location-link {
   font-family: var(--font-sans);
@@ -996,7 +999,7 @@ footer { position: relative; z-index: 2; border-top: 1px solid var(--rule); padd
     <!-- The trunk: Seraph Group — the firm the whole network grows from -->
     <div class="trunk-panel reveal reveal-d1">
       <div class="trunk-eyebrow">The Firm</div>
-      <h2 class="trunk-h">Backed by <em>Seraph Group</em></h2>
+      <h2 class="trunk-h">The firm he built: <em>Seraph Group</em></h2>
       <div class="trunk-body">
         <p>Tuff is the founder, CEO, and General Partner of Seraph Group — the global investment firm behind two decades of his work, and the engine of deal flow, diligence, and discipline he draws on. More recently, he launched two further efforts under the firm — Seraph Direct and the Seraph Research Foundation — described below.</p>
       </div>
@@ -1012,7 +1015,7 @@ footer { position: relative; z-index: 2; border-top: 1px solid var(--rule); padd
         </a>
         <a href="https://seraphresearchfoundation.org" target="_blank" rel="noopener" class="firm-arm">
           <h4>Seraph Research Foundation</h4>
-          <p>Seraph's educational arm — teaching how private-market investing actually works. The same mission behind the angel-group seminars.</p>
+          <p>Seraph's educational arm — teaching how private-market investing actually works, for newcomers and seasoned investors alike.</p>
           <span class="firm-arm-go" aria-hidden="true">seraphresearchfoundation.org &#8599;</span>
         </a>
       </div>
@@ -1260,18 +1263,18 @@ footer { position: relative; z-index: 2; border-top: 1px solid var(--rule); padd
       <h2 class="section-title" style="margin:0 auto;">Two ways to <em>take part</em></h2>
     </div>
     <div class="paths reveal reveal-d1">
-      <div class="path-card">
+      <a class="path-card" href="#locations">
         <div class="path-eyebrow">Learn, source &amp; invest</div>
         <div class="path-h">Join a city angel group</div>
         <p class="path-p">An ongoing circle, not a one-off class. Members learn how early-stage investing works, see real deal flow, and invest together &mdash; beginning with a free introductory seminar, then continuing from there. Whether you invest is always your choice.</p>
-        <a href="#locations" class="path-link">See the groups</a>
-      </div>
-      <div class="path-card">
+        <span class="path-link">See the groups</span>
+      </a>
+      <a class="path-card" href="https://app.seraphdirect.com" target="_blank" rel="noopener">
         <div class="path-eyebrow">Accredited investors</div>
         <div class="path-h">Seraph Direct</div>
         <p class="path-p">Seraph's deal-by-deal co-investment platform for accredited investors &mdash; backing individual companies alongside Seraph, with the SPV and back-office handled.</p>
-        <a href="https://app.seraphdirect.com" target="_blank" rel="noopener" class="path-link">Learn more</a>
-      </div>
+        <span class="path-link">Learn more</span>
+      </a>
     </div>
     <div class="rec-strip reveal">
       <span>Speaker, <strong style="color:var(--cream-soft);font-weight:600;">ACA Summit 2026</strong></span>
